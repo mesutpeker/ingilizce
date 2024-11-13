@@ -641,6 +641,9 @@ function startCategory(category) {
     currentQuestionIndex = 0;
     score = 0;
     
+    // Skor tablosunu gizle
+    document.getElementById('scoreboard').style.display = 'none';
+    
     switch(category) {
         case 'words':
             questions = wordsQuestions;
