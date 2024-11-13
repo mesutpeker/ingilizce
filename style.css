@@ -366,7 +366,7 @@ body {
 }
 
 .emoji-wrong {
-    animation: wrongShake 1s ease-in-out;
+    animation: wrongShake 2s ease-in-out;
 }
 
 @keyframes fadeInOut {
