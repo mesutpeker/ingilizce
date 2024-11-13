@@ -846,7 +846,7 @@ function showScoreboard() {
 function getCategoryName(category) {
     const categories = {
         'words': 'Kelimeler',
-        'spelling': 'Yazım',
+        'spelling': 'Doğru Yazılışı',
         'speaking': 'Konuşma'
     };
     return categories[category] || category;
