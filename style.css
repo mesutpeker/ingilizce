@@ -357,7 +357,7 @@ body {
     }
 
     .app-title {
-        font-size: 1.8em;
+        font-size: 2em;
     }
 
     .category-buttons {
@@ -370,7 +370,7 @@ body {
 
     .options button {
         padding: 12px 15px;
-        font-size: 1em;
+        font-size: 1.6em;
     }
 
     .timer {
@@ -399,12 +399,12 @@ body {
     }
 
     .question {
-        font-size: 1.1em;
+        font-size: 1.6em;
     }
 
     .options button {
         padding: 10px;
-        font-size: 0.9em;
+        font-size: 1.2em;
     }
 
     .timer {
