@@ -697,6 +697,7 @@ function updateQuestion() {
         currentQuestion.question : currentQuestion.questionTr;
 
     const optionsContainer = document.getElementById('options');
+    // Önce container'ı temizle
     optionsContainer.innerHTML = '';
 
     const currentOptions = isEnglish ? currentQuestion.options : currentQuestion.optionsTr;
@@ -704,10 +705,32 @@ function updateQuestion() {
     currentOptions.forEach((option, index) => {
         const button = document.createElement('button');
         button.textContent = option;
-        button.onclick = () => handleAnswer(index);
+        // touchend kullanarak click yerine dokunma olayını yakala
+        button.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            // Aktif durumu hemen kaldır
+            button.blur();
+            // Tıklama işlemini geciktirerek yap
+            setTimeout(() => handleAnswer(index), 50);
+        }, false);
+        
+        // Safari'de vurguyu engellemek için
+        button.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+        }, false);
+        
         optionsContainer.appendChild(button);
     });
 
+    // Tüm butonların durumlarını sıfırla
+    document.querySelectorAll('.options button').forEach(btn => {
+        btn.blur();
+        btn.classList.remove('correct', 'wrong');
+    });
+    
+    // Soru numarası ve toplam soru sayısını güncelle
     document.getElementById('currentQuestion').textContent = currentQuestionIndex + 1;
     document.getElementById('totalQuestions').textContent = questions.length;
     updateProgress();
