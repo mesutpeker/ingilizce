@@ -819,8 +819,7 @@ function endGame() {
     
     document.getElementById('quizContainer').style.display = 'none';
     document.getElementById('categorySelection').style.display = 'block';
-    
-    showScoreboard();
+    document.getElementById('scoreboard').style.display = 'none'; // Skor tablosunu gizle
 }
 
 function showScoreboard() {
