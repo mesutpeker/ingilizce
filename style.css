@@ -236,12 +236,30 @@ body {
     transition: all 0.3s ease;
     text-align: left;
     font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    appearance: none;
+}
+
+.options button:any-link {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .options button:hover {
     background: #3498db;
     color: white;
     transform: translateX(5px);
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .options button:focus,
+    .options button:active {
+        background: white !important;
+        color: #2c3e50 !important;
+        transform: none !important;
+    }
 }
 
 .options button.correct {
