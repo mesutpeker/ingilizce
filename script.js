@@ -566,7 +566,7 @@ const spellingQuestions = [
 const speakingQuestions = [
     {
         question: "How do you say 'Günaydın'?",
-        questionTr: "'Günaydın' nasıl söylenir?",
+        questionTr: "'How do you say 'Günaydın'?",
         options: ["Good morning", "Good night", "Good evening", "Good afternoon"],
         optionsTr: ["Günaydın", "İyi geceler", "İyi akşamlar", "İyi öğlenler"],
         correct: 0
